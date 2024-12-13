@@ -1,0 +1,198 @@
+*
+ {
+    margin: 1px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    text-align:center;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #e1e1ee;
+}
+
+/* Header Styles */
+.slideshow-header {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+@keyframes slide {
+    0% {
+      background-image: url('./res/background.jpg');
+    }
+    33% {
+      background-image: url('./res/background1.jpg');
+    }
+    66% {
+      background-image: url('./res/background2.jpg');
+    }
+    100% {
+      background-image: url('./res/background.jpg');
+    }
+  }
+  header {
+    height: 300px;
+    animation-name: slide;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    }
+
+.slideshow-header .overlay {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 200px;
+    border-radius: 25%;
+    border: 3px solid #4caf50;
+    margin-bottom: 10px;
+}
+
+.slideshow-header h1 {
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+
+/* Section Styles */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+}
+
+.experience .job {
+    margin-bottom: 15px;
+}
+
+.experience h3 {
+    color: #4caf50;
+}
+
+.education p, .skills ul, .contact p {
+    font-size: 1rem;
+}
+
+.skills ul {
+    list-style: square;
+    padding-left: 20px;
+}
+div.mycontainer {
+    width:100%;
+    overflow:auto;
+  }
+  div.mycontainer div {
+    width:33%;  
+    float:left;
+  }
+  div.mycontainer1 {
+    width:100%;
+    overflow:auto;
+  }
+  div.mycontainer1 div {
+    width:33%;  
+    float:left;
+  }
+.contact a {
+    color: #1d1abe;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.menu:hover {
+    left: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    background-color: #4caf50;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+}
+
+.menu a:hover {
+    background-color: #45a049;
+}
+/* Handle (Visible Edge with the SVG Icon) */
+.menu-handle {
+    position: absolute;
+    top: 50%;
+    right: -30px; /* Sticking out slightly */
+    transform: translateY(50%);
+    background-color: #4caf50;
+    width: 30px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* SVG Styling */
+.menu-handle svg {
+    width: 20px;
+    height: 20px;
+    fill: rgb(255, 255, 255);
+}
+
+/* Hover Effect for Menu */
+.menu:hover {
+    left: 0; /* Slide into view */
+}
+
+
